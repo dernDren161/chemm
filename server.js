@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const compare = require('./compare');
 const backendInput = require('./backend-input');
 
+let port = process.env.PORT || 3000;
+
 let app = express();
 
 mongoose.Promise = global.Promise;
@@ -27,8 +29,8 @@ app.post('/', (req, res) => {
     res.send({ result: f });
 });
 
-app.listen(3000, () => {
-    console.log("Front: Started on 3000");
+app.listen(port, () => {
+    console.log(`running on port ${port}`);
 });
 
 module.exports = {
