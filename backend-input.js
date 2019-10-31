@@ -3,7 +3,7 @@ let schema = require('./schema');
 let { update } = require('./update-mongoose');
 
 let newObj = new schema.schema({
-    sphinxID: '123245',
+    sphinxID: '98',
     q1: false,
     q2: false,
     q3: false,
